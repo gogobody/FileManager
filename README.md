@@ -17,6 +17,6 @@ GUI文件管理系统
 
 7、文件管理器具有图形界面。
 
-![Image text](https://github.com/yguo18/CircleFollowButton/raw/master/Assets/Image/xiaoguotu.png)
+![Image text](https://github.com/gogobody/FileManager/raw/master/image/jietu.png)
 
 ![Image text]：UI
