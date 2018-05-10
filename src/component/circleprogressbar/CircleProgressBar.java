@@ -15,39 +15,23 @@ public class CircleProgressBar extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * ��С����ֵ��
-	 */
+
 	private int minimumProgress;
 
-	/**
-	 * ������ֵ��
-	 */
+
 	private int maximumProgress;
 
-	/**
-	 * ��ǰ����ֵ��
-	 */
 	private int progress;
 
-	/**
-	 * ������ɫ��
-	 */
+
 	private Color backgroundColor;
 
-	/**
-	 * ǰ����ɫ��
-	 */
+
 	private Color foregroundColor;
 
-	/**
-	 * ������ɫ��
-	 */
+
 	private Color digitalColor;
 
-	/**
-	 * ����һ��Բ�ν���������
-	 */
 	public CircleProgressBar() {
 		setMinimumProgress(0);
 		setMaximumProgress(100);
@@ -57,17 +41,11 @@ public class CircleProgressBar extends JPanel {
 		setDigitalColor(Color.BLACK);
 	}
 
-	/**
-	 * ����Բ�ν�������
-	 * 
-	 * @param g
-	 *            ���ʡ�
-	 */
+
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
 		Graphics2D graphics2d = (Graphics2D) g;
-		// ���������
 		graphics2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		int x = 0;
 		int y = 0;
@@ -100,63 +78,36 @@ public class CircleProgressBar extends JPanel {
 		graphics2d.drawString(progress + "%", getWidth() / 2 - digitalWidth / 2, getHeight() / 2 + digitalAscent / 2);
 	}
 
-	/**
-	 * ������С����ֵ��
-	 * 
-	 * @return ��С����ֵ��
-	 */
+
 	public int getMinimumProgress() {
 		return minimumProgress;
 	}
 
-	/**
-	 * ������С����ֵ��
-	 * 
-	 * @param minimumProgress
-	 *            ��С����ֵ��
-	 */
+
 	public void setMinimumProgress(int minimumProgress) {
 		if (minimumProgress <= getMaximumProgress()) {
 			this.minimumProgress = minimumProgress;
 		}
 	}
 
-	/**
-	 * ����������ֵ��
-	 * 
-	 * @return ������ֵ��
-	 */
+
 	public int getMaximumProgress() {
 		return maximumProgress;
 	}
 
-	/**
-	 * ����������ֵ��
-	 * 
-	 * @param maximumProgress
-	 *            ������ֵ��
-	 */
+
 	public void setMaximumProgress(int maximumProgress) {
 		if (maximumProgress >= getMinimumProgress()) {
 			this.maximumProgress = maximumProgress;
 		}
 	}
 
-	/**
-	 * ���ص�ǰ����ֵ��
-	 * 
-	 * @return ��ǰ����ֵ��
-	 */
+
 	public int getProgress() {
 		return progress;
 	}
 
-	/**
-	 * ���õ�ǰ����ֵ��
-	 * 
-	 * @param progress
-	 *            ��ǰ����ֵ��
-	 */
+
 	public void setProgress(int progress) {
 		if (progress >= getMinimumProgress() && progress <= getMaximumProgress()) {
 			this.progress = progress;
@@ -164,61 +115,32 @@ public class CircleProgressBar extends JPanel {
 		}
 	}
 
-	/**
-	 * ���ر�����ɫ��
-	 * 
-	 * @return ������ɫ��
-	 */
 	public Color getBackgroundColor() {
 		return backgroundColor;
 	}
 
-	/**
-	 * ���ñ�����ɫ��
-	 * 
-	 * @param backgroundColor
-	 *            ������ɫ��
-	 */
+
 	public void setBackgroundColor(Color backgroundColor) {
 		this.backgroundColor = backgroundColor;
 		this.repaint();
 	}
 
-	/**
-	 * ����ǰ����ɫ��
-	 * 
-	 * @return ǰ����ɫ��
-	 */
+
 	public Color getForegroundColor() {
 		return foregroundColor;
 	}
 
-	/**
-	 * ����ǰ����ɫ��
-	 * 
-	 * @param foregroundColor
-	 *            ǰ����ɫ��
-	 */
+
 	public void setForegroundColor(Color foregroundColor) {
 		this.foregroundColor = foregroundColor;
 		this.repaint();
 	}
 
-	/**
-	 * ����������ɫ��
-	 * 
-	 * @return ������ɫ��
-	 */
 	public Color getDigitalColor() {
 		return digitalColor;
 	}
 
-	/**
-	 * ����������ɫ��
-	 * 
-	 * @param digitalColor
-	 *            ������ɫ��
-	 */
+	
 	public void setDigitalColor(Color digitalColor) {
 		this.digitalColor = digitalColor;
 		this.repaint();
